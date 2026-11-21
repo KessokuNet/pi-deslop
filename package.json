@@ -1,0 +1,28 @@
+{
+	"name": "pi-deslop",
+	"version": "0.1.0",
+	"description": "Claude-ism removal for pi, ported from the deslop Claude Code plugin",
+	"license": "MIT",
+	"type": "module",
+	"keywords": ["pi-package", "pi", "pi-extension", "voice", "prose", "claude-isms", "slop"],
+	"engines": {
+		"node": ">=20"
+	},
+	"pi": {
+		"extensions": ["./index.ts"],
+		"skills": ["./skills/deslop"]
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"devDependencies": {
+		"@earendil-works/pi-coding-agent": "*",
+		"@types/node": "^22.0.0",
+		"typescript": "^5.6.0",
+		"vitest": "^3.0.0"
+	}
+}
